@@ -55,10 +55,10 @@ Tried to access the various log files listed here, but it's forbidden except `ma
 
 ![Screenshot](7.png)
 
-From this we get to know there's a directory `ITDEPT` and it contains two files web-control and product-control.
-As these files were mentioned with cron, we can safely say that these files are getting executed by some background task.
+From this we get to know there's a directory `ITDEPT` and it contains two files `web-control` and `product-control`.
+As these files were mentioned with cron, we can say that these files are getting executed by some background task.
 
-We found that there is a NetBIOS SMB port open in nmap result, so we can use the Enum4Linux script. This shows that we have the ITDEPT directory we found earlier. This means this directory is accessible through SMB.
+We found that there is a `NetBIOS` `SMB` port open in `nmap` result, so we can use the `enum4Linux` script. This shows that we have the `ITDEPT` directory we found earlier. This means this directory is accessible through `SMB`.
 
 **Step 5: Access through enum4linux**
 

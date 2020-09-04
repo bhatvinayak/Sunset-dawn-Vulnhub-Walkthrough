@@ -98,7 +98,7 @@ We went back to our terminal and created the files by the name of `product-contr
 
 ![Screenshot](10b.png)
 
-Now back to the SMB shell, we transferred the files that we just created to the target system using the put command. Both the files were successfully transferred. After the transfer, we ran the ls command to check whether the files were indeed on the system or not. As seen in the image given below, we have put our files on the target system. 
+Now back to the SMB shell, we transferred the files that we just created to the target system using the put command. Both the files were successfully transferred. After the transfer, we ran the ls command to check whether the files were indeed on the system or not.
 
 **Step 9: Check the log file**
 

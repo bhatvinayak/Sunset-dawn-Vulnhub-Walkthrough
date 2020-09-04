@@ -88,9 +88,9 @@ Since we found the ITDEPT directory in our enumeration. We tried to access it us
 
 ![Screenshot](9.png)
 
-We went back to our terminal and created the files by the name of `product-control` and `web-control`. We created the files by this name because earlier while enumerating the `management.log` file we saw that files with this name were executed after every minute. again and again, using cron. We also entered the netcat shell invocation script in those files using the echo command as well.
+We went back to our terminal and created the files by the name of `product-control` and `web-control`. We created the files by this name because earlier while enumerating the `management.log` file we saw that files with this name were executed after every minute. again and again, using cron. We also entered the `netcat` shell invocation script in those files using the `echo` command as well.
 
-**Step 8: Upload the file **
+**Step 8: Upload the file**
 
 > puts web-control
 

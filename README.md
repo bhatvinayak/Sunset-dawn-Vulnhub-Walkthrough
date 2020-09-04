@@ -80,4 +80,12 @@ But this doesn’t mean that we cannot create any file in it. We went back to ou
 
 ![Screenshot](9.png)
 
+![Screenshot](10b.png)
+
+![Screenshot](11.png)
+
+![Screenshot](12.png)
+
+![Screenshot](13.png)
+
 

@@ -80,11 +80,20 @@ But this doesn’t mean that we cannot create any file in it. We went back to ou
 
 ![Screenshot](9.png)
 
+Now back to the SMB shell, we transferred the files that we just created to the target system using the put command. Both the files were successfully transferred. After the transfer, we ran the ls command to check whether the files were indeed on the system or not. As seen in the image given below, we have put our files on the target system. 
+
 ![Screenshot](10b.png)
+
+Now, we went back to our browser, to see the log directory. From there we downloaded the management.log file again. We did this as if those files we just created were executed or not. As shown in the image, the files were successfully executed.
 
 ![Screenshot](11.png)
 
+Now we ran the netcat to get this session on the target machine. We get our shell through netcat. This was an improper shell. So, we used the python one-liner to convert this into a proper shell. On conversion, we saw that the shell we got was of user dawn.
+
 ![Screenshot](12.png)
+
+Now that we had a shell, it was a regular practice to check for any file having SUID permissions with the help of Find command. By using the following command, we enumerated all binaries having SUID permissions:
+The Find command gave us that the zsh command can help us escalate privilege on this machine. We ran the zsh command and checked our status using the whoami command. We got root. Now it was time to enumerate for the flag. We traversed into the root directory and found the flag.txt file. This concludes this CTF
 
 ![Screenshot](13.png)
 

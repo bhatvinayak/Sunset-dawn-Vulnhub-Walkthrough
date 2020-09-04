@@ -62,4 +62,22 @@ As these files were mentioned with cron, we can safely say that these files are 
 
 We found that there is a NetBIOS SMB port open in nmap result, so we can use the Enum4Linux script. This shows that we have the ITDEPT directory we found earlier. This means this directory is accessible through SMB.
 
+**Step 5: Access through enum4linux**
+
+>enum4linux -a <IP_address_of_your_machine>
+
 ![Screenshot](6.png)
+
+From this we came to know that there are two users 'dawn' and 'ganimedes'
+
+![Screenshot](8.png)
+
+Since we found the ITDEPT directory in our enumeration. We tried to access it using the SMB as shown in the image. We gave a blank password to login. Upon logging in we ran the ls command. We found nothing in it. We ran the ls command again with the -al parameters to see if we missed any hidden files but we couldn’t find any.
+
+![Screenshot](10.png)
+
+But this doesn’t mean that we cannot create any file in it. We went back to our terminal and created the files by the name of “product-control” and “web-control”. We created the files by this name because earlier while enumerating the management.log file we saw that files with this name were executed after every minute. again and again, using cron. We also entered the netcat shell invocation script in those files using the echo command as well.
+
+![Screenshot](9.png)
+
+

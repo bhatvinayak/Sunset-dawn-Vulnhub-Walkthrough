@@ -17,4 +17,4 @@ So let's begin hacking!!
 
 > nmap -A -p- <IP_address_of_your_machine>
 
-![Screenshot](Screenshot(1).png)
+![Screenshot](1.png)

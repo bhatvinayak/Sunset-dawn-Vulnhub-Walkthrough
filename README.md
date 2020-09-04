@@ -15,6 +15,44 @@ So let's begin hacking!!
 
 **Step 1: Scan the machine**
 
-> nmap -A -p- <IP_address_of_your_machine>
+> nmap -sV -A <IP_address_of_your_machine>
 
 ![Screenshot](1.png)
+
+As we can see that port 80 is open which is hosting Apache httpd service and also we have the port 139,445,3306 open. This tells us that we have the NetBIOS and MySQL service running on the target machine respectively.
+
+**Step 2: Go to machine's IP in web browser**
+
+In your web browser
+
+>http://<IP_address_of_your_machine>  
+
+![Screenshot](2.png)
+
+This doesn't help us much! Let's try bruteforcing the IP with dirb.
+
+**Step 3: Bruteforce the IP with dirb**
+
+> dirb http://<IP_address_of_your_machine>
+
+We are looking only for files containing .txt extension
+
+![Screenshot](3.png)
+
+After bruteforcing we got a directory 'logs' Let's see what it contains
+
+In your web browser
+
+>http://<IP_address_of_your_machine>/logs
+
+![Screenshot](4.png)
+
+Tried to access the various log files listed here, but it's forbidden except 'management.log'
+
+**Step 4: Access the 'management.log'**
+
+>cd Downloads
+>cat management.log
+
+![Screenshot](7.png)
+

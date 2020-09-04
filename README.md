@@ -144,7 +144,7 @@ Using netcat we got our shell. For a proper shell we used the python one-liner. 
 
 ![Screenshot](13.png)
 
-As we got our shell, it's a regular practice to check for any file having SUID permissions with the help of `find command`.From this, we enumerated all binaries having SUID permissions:
+As we got our shell, it's a regular practice to check for any file having SUID permissions with the help of `find` command.From this, we enumerated all binaries having SUID permissions:
 The `find` command gave us that the `zsh` command can help us escalate privilege on this machine.
 We ran the zsh command and checked our status using the `whoami` command.
 We got root. Now it was time to enumerate for the flag. We traversed into the root directory and found the `flag.txt` file.
